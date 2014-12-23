@@ -1,0 +1,14 @@
+on boot
+    mkdir /cust
+
+service rmt_storage /bin/rmt_storage
+    user root
+    disabled
+
+service rmt_oeminfo /bin/rmt_oeminfo
+    user root
+    disabled
+
+on property:ro.emmc=1
+    start rmt_oeminfo
+    start rmt_storage

@@ -1,0 +1,11 @@
+bin/linker
+bin/rmt_storage
+bin/rmt_oeminfo
+lib/libc.so
+lib/libcutils.so
+lib/liblog.so
+lib/libm.so
+lib/liboeminfo.so
+lib/libstdc++.so
+lib/libutils.so
+lib/libz.so
