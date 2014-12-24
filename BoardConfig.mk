@@ -21,7 +21,7 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a5 -mfpu=neon -mfloat-abi=softfp
 
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := device/huawei/204hw/fstab.huawei
-BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/204hw/recovery/graphics.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/204hw/recovery/graphics.c ../../../device/huawei/204hw/recovery/graphics_overlay.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/204hw/recovery/keys.c
 TARGET_USERIMAGES_USE_EXT4 := true
 
