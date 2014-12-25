@@ -13,4 +13,7 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
   adb pull /system/$FILE $BASE/$FILE
 done
 
+mkdir -p recovery/root/system
+cp -ra $BASE/* recovery/root/system
+
 ./setup-makefiles.sh
