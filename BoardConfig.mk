@@ -16,9 +16,6 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := 204hw
 
-TARGET_GLOBAL_CFLAGS += -mtune=cortex-a5 -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a5 -mfpu=neon -mfloat-abi=softfp
-
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := device/huawei/204hw/fstab.huawei
 BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/204hw/recovery/graphics.c ../../../device/huawei/204hw/recovery/graphics_overlay.c
