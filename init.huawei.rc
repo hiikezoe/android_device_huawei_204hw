@@ -1,0 +1,17 @@
+on init
+    mkdir /cust
+
+on post-fs
+    mount_all ./fstab.huawei
+
+service rmt_storage /system/bin/rmt_storage
+    user root
+    disabled
+
+service rmt_oeminfo /system/bin/rmt_oeminfo
+    user root
+    disabled
+
+on property:ro.emmc=1
+    start rmt_oeminfo
+    start rmt_storage

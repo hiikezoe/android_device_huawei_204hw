@@ -9,6 +9,10 @@ DEVICE_PACKAGE_OVERLAYS += device/huawei/204hw/overlay
 
 LOCAL_PATH := device/huawei/204hw
 
+PRODUCT_COPY_FILES += \
+  $(LOCAL_PATH)/fstab.huawei:root/fstab.huawei \
+  $(LOCAL_PATH)/init.huawei.rc:root/init.huawei.rc
+
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
