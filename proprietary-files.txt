@@ -11,3 +11,4 @@ lib/libOpenVG.so
 lib/libsc-a2xx.so
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
+etc/audio_policy.conf
