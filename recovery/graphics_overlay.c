@@ -42,9 +42,10 @@
 #include <linux/fb.h>
 #include <linux/kd.h>
 
+#undef MSM_BSP
 #ifdef MSM_BSP
 #include <linux/msm_mdp.h>
-#include <linux/msm_ion.h>
+#include <linux/ion.h>
 #endif
 
 #include <pixelflinger/pixelflinger.h>
