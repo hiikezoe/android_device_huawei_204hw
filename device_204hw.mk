@@ -11,7 +11,7 @@ LOCAL_PATH := device/huawei/204hw
 
 PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/fstab.huawei:root/fstab.huawei \
-  $(LOCAL_PATH)/init.huawei.rc:root/init.huawei.rc
+  $(LOCAL_PATH)/rootdir/init.huawei.rc:root/init.huawei.rc
 
 $(call inherit-product, build/target/product/full.mk)
 
