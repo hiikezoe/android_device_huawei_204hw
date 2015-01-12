@@ -6,4 +6,3 @@ ro.opengles.version=131072
 debug.atrace.tags.enableflags=false
 debug.composition.type=dyn
 debug.hwc.dynThreshold=1.9
-hwui.render_dirty_regions=false
