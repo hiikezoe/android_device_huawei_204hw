@@ -24,6 +24,19 @@ lib/hw/lights.msm7627a.so
 lib/hw/nfc.huawei.so
 lib/hw/sensors.default.so
 
+#lib/libcamera_client.so
+#lib/libimage-jpeg-enc-omx-comp.so
+#lib/libimage-omx-common.so
+#lib/libmmcamera_interface2.so
+#lib/libmmjpeg.so
+#lib/libmmstillomx.so
+
+lib/libdiag.so
+lib/libdsm.so
+lib/libhwrpc.so
+lib/liboncrpc.so
+lib/libqueue.so
+
 nv/MSM8X25_C8813/nv_ext.bin
 nv/MSM8X25_C8813/nv_ext_FTY.bin
 nv/MSM8X25_C8813D/nv_ext.bin
