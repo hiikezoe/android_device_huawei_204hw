@@ -15,6 +15,8 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/rootdir/ueventd.huawei.rc:root/ueventd.huawei.rc
 
 $(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, $(LOCAL_PATH)/keylayout/keylayout.mk)
+$(call inherit-product, $(LOCAL_PATH)/keychars/keychars.mk)
 
 PRODUCT_PACKAGES += \
   libgenlock \
@@ -26,3 +28,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_204hw
 PRODUCT_DEVICE := 204hw
+
