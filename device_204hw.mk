@@ -15,6 +15,7 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/rootdir/ueventd.huawei.rc:root/ueventd.huawei.rc
 
 $(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, $(LOCAL_PATH)/idc/idc.mk)
 $(call inherit-product, $(LOCAL_PATH)/keylayout/keylayout.mk)
 $(call inherit-product, $(LOCAL_PATH)/keychars/keychars.mk)
 
