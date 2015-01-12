@@ -8,11 +8,16 @@ $(call inherit-product-if-exists, vendor/huawei/204hw/204hw-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/huawei/204hw/overlay
 
 LOCAL_PATH := device/huawei/204hw
+VENDOR_PATH := vendor/huawei/204hw/proprietary
 
 PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/fstab.huawei:root/fstab.huawei \
   $(LOCAL_PATH)/rootdir/init.huawei.rc:root/init.huawei.rc \
   $(LOCAL_PATH)/rootdir/ueventd.huawei.rc:root/ueventd.huawei.rc
+
+PRODUCT_COPY_FILES += \
+  $(VENDOR_PATH)/lib/hw/camera.msm7627a.so:system/lib/hw/camera.msm7x27a.so \
+  $(VENDOR_PATH)/lib/hw/lights.msm7627a.so:system/lib/hw/lights.msm7x27a.so
 
 $(call inherit-product, build/target/product/full.mk)
 $(call inherit-product, $(LOCAL_PATH)/idc/idc.mk)
