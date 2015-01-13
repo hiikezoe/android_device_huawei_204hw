@@ -19,8 +19,8 @@ lib/libril-qc-qmi-1.so
 lib/libril-qc-1.so
 lib/libril-qcril-hook-oem.so
 
-lib/hw/camera.msm7627a.so
-lib/hw/lights.msm7627a.so
+lib/hw/camera.msm7627a.so:lib/hw/camera.msm7x27a.so
+lib/hw/lights.msm7627a.so:lib/hw/lights.msm7x27a.so
 lib/hw/nfc.huawei.so
 lib/hw/sensors.default.so
 
