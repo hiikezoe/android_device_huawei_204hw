@@ -1,6 +1,8 @@
 #
 # system.prop for 204hw
 #
+dalvik.vm.jit.codecachesize=0
+ro.config.low_ram=true
 ro.sf.lcd_density=240
 ro.opengles.version=131072
 debug.atrace.tags.enableflags=false
