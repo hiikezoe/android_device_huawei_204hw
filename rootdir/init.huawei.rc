@@ -10,7 +10,7 @@ on init
     export EXTERNAL_STORAGE /storage/sdcard0
     export SECONDARY_STORAGE /storage/sdcard1
 
-on post-fs
+on emmc-fs
     mount_all ./fstab.huawei
 
 service rmt_storage /system/bin/rmt_storage
