@@ -14,11 +14,11 @@ on emmc-fs
     mount_all ./fstab.huawei
 
 service rmt_storage /system/bin/rmt_storage
-    user root
+    class core
     disabled
 
 service rmt_oeminfo /system/bin/rmt_oeminfo
-    user root
+    class core
     disabled
 
 service gpu_dcvsd /system/bin/gpu_dcvsd
