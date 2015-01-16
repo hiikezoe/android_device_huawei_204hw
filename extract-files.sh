@@ -58,4 +58,6 @@ rm -rf $BASE/*
 
 extract ../../$VENDOR/$DEVICE/proprietary-files.txt $BASE
 
+extract ../../$VENDOR/$DEVICE/proprietary-files-recovery.txt ../../$VENDOR/$DEVICE/recovery/root/vendor
+
 ./setup-makefiles.sh

@@ -1,0 +1,8 @@
+bin/rmt_oeminfo
+bin/rmt_storage
+lib/libc.so
+lib/libcutils.so
+lib/liblog.so
+lib/libm.so
+lib/liboeminfo.so
+lib/libstdc++.so
