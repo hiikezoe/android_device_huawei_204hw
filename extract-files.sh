@@ -29,24 +29,25 @@ function extract() {
       then
         DEST=$FILE
       fi
+      _BASE=$2
       DIR=`dirname $DEST`
-      if [ ! -d $BASE/$DIR ]; then
-        mkdir -p $BASE/$DIR
+      if [ ! -d $_BASE/$DIR ]; then
+        mkdir -p $_BASE/$DIR
       fi
       # Try CM target first
       if [ "$SRC" = "adb" ]; then
-        adb pull /system/$DEST $BASE/$DEST
+        adb pull /system/$DEST $_BASE/$DEST
         # if file does not exist try OEM target
         if [ "$?" != "0" ]; then
-            adb pull /system/$FILE $BASE/$DEST
+            adb pull /system/$FILE $_BASE/$DEST
         fi
       else
         if [ -z $SRC/system/$DEST ]; then
             echo ":: $DEST"
-            cp $SRC/system/$DEST $BASE/$DEST
+            cp $SRC/system/$DEST $_BASE/$DEST
         else
             echo ":: $FILE"
-            cp $SRC/system/$FILE $BASE/$DEST
+            cp $SRC/system/$FILE $_BASE/$DEST
         fi
       fi
     done
