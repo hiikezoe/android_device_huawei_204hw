@@ -1,3 +1,4 @@
+bin/linker
 bin/rmt_oeminfo
 bin/rmt_storage
 lib/libc.so
