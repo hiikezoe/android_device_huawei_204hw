@@ -1,10 +1,15 @@
 on boot
     mkdir /cust
 
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /vendor/bin/rmt_storage
     user root
     disabled
 
-service rmt_oeminfo /system/bin/rmt_oeminfo
+service rmt_oeminfo /vendor/bin/rmt_oeminfo
     user root
     disabled
+
+on property:ro.emmc=1
+    start rmt_oeminfo
+    start rmt_storage
+
