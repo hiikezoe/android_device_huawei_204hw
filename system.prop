@@ -19,4 +19,4 @@ ro.telephony.default_network=0
 ro.telephony.call_ring.delay=3000
 ro.telephony.call_ring.multiple=false
 ro.telephony.ril.v3=qcomdsds
-ro.telephony.ril_class=RIL
+ro.telephony.ril_class=QualcommSharedRIL
