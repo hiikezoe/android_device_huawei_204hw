@@ -2,6 +2,8 @@
 # system.prop for 204hw
 #
 dalvik.vm.jit.codecachesize=0
+ro.config.hw_fast_dormancy_ap=true
+ro.config.hw_fast_dormancy=3
 ro.config.low_ram=true
 ro.sf.lcd_density=240
 ro.opengles.version=131072
@@ -13,6 +15,7 @@ ril.subscription.types=NV,RUIM
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d/dev/smd0
 persist.dsds.enabled=false
+persist.radio.force_nw_search=1
 ro.bq.gpu_to_cpu_unsupported=1
 ro.dual.sim.phone=false
 ro.telephony.default_network=2 # NETWORK_MODE_WCDMA_ONLY
