@@ -84,11 +84,6 @@ service ril-qmi /system/bin/sh /init.qcom.ril.path.sh
     user root
     oneshot
 
-service compassd /system/bin/compassd
-    class main
-    disabled
-    oneshot
-
 service akm8975 /system/bin/akmd8975
     class main
     disabled

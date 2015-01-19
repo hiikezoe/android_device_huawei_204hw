@@ -1,6 +1,5 @@
 bin/akmd8963
 bin/akmd8975
-bin/compassd
 bin/gpu_dcvsd
 bin/oem_rpc_svc
 bin/qmuxd
