@@ -1,5 +1,7 @@
 #!/bin/bash
 
+BASEDIR=`dirname $0`
+
 set -e
 export DEVICE=204hw
 export VENDOR=huawei
@@ -53,12 +55,12 @@ function extract() {
     done
 }
 
-BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
+BASE=$BASEDIR/../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*
 
-extract ../../$VENDOR/$DEVICE/proprietary-files.txt $BASE
+extract $BASEDIR/../../$VENDOR/$DEVICE/proprietary-files.txt $BASE
 
-extract ../../$VENDOR/$DEVICE/proprietary-files-recovery.txt ../../$VENDOR/$DEVICE/recovery/root/vendor
-find ../../$VENDOR/$DEVICE/recovery/root/vendor/bin -type f | xargs sed -i -e 's/\/system\/bin/\/vendor\/bin/g'
+extract $BASEDIR/../../$VENDOR/$DEVICE/proprietary-files-recovery.txt $BASEDIR/../../$VENDOR/$DEVICE/recovery/root/vendor
+find $BASEDIR/../../$VENDOR/$DEVICE/recovery/root/vendor/bin -type f | xargs sed -i -e 's/\/system\/bin/\/vendor\/bin/g'
 
-./setup-makefiles.sh
+$BASEDIR/setup-makefiles.sh

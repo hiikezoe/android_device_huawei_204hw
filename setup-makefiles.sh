@@ -1,8 +1,11 @@
 #!/bin/bash
+
+BASEDIR=`dirname $0`
+
 VENDOR=huawei
 DEVICE=204hw
 OUTDIR=vendor/$VENDOR/$DEVICE
-MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
+MAKEFILE=$BASEDIR/../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
 (cat << EOF) > $MAKEFILE
 # Copyright (C) 2011 The CyanogenMod Project
@@ -24,10 +27,10 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-COUNT=`wc -l proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' proprietary-files.txt`
+COUNT=`wc -l ${BASEDIR}/proprietary-files.txt | awk {'print $1'}`
+DISM=`egrep -c '(^#|^$)' ${BASEDIR}/proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ${BASEDIR}/proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
   if [ $COUNT = "0" ]; then
     LINEEND=""
@@ -44,6 +47,6 @@ for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
   fi
 done
 
-(cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
+(cat << EOF) > $BASEDIR/../../../$OUTDIR/$DEVICE-vendor.mk
 \$(call inherit-product, $OUTDIR/$DEVICE-vendor-blobs.mk)
 EOF
