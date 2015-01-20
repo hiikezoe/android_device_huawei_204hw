@@ -13,6 +13,7 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/fstab.huawei:root/fstab.huawei \
   $(LOCAL_PATH)/rootdir/init.huawei.rc:root/init.huawei.rc \
   $(LOCAL_PATH)/rootdir/init.qcom.ril.path.sh:root/init.qcom.ril.path.sh \
+  $(LOCAL_PATH)/rootdir/init.qcom.composition_type.sh:system/etc/init.qcom.composition_type.sh \
   $(LOCAL_PATH)/rootdir/ueventd.huawei.rc:root/ueventd.huawei.rc
 
 PRODUCT_COPY_FILES += \

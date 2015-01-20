@@ -1,3 +1,6 @@
+on early-boot
+    start comp-set
+
 on init
     mkdir /cust
 
@@ -93,3 +96,11 @@ service akm8963 /system/bin/akmd8963
     class main
     disabled
     oneshot
+
+service comp-set /system/bin/sh /system/etc/init.qcom.composition_type.sh
+    class late_start
+    user root
+    critical
+    disabled
+    oneshot
+
