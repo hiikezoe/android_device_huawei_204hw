@@ -104,3 +104,5 @@ service comp-set /system/bin/sh /system/etc/init.qcom.composition_type.sh
     disabled
     oneshot
 
+on property:sys.radio.shutdown=true
+   exec /system/bin/sh /system/etc/init.qcom.efs.sync.sh
