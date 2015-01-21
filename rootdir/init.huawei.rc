@@ -102,6 +102,15 @@ service akm8963 /system/bin/akmd8963
     disabled
     oneshot
 
+service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+    class late_start
+    user root
+
+service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
+    class late_start
+    user system
+    group system
+
 service thermald /system/bin/thermald
     class late_start
     disabled
