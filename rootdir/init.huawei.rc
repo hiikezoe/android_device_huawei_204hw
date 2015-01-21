@@ -13,6 +13,11 @@ on init
     export EXTERNAL_STORAGE /storage/sdcard0
     export SECONDARY_STORAGE /storage/sdcard1
 
+    symlink /storage/sdcard0 /mnt/internal_sd
+    symlink /storage/sdcard0 /internal_sd
+    symlink /storage/sdcard1 /mnt/sdcard
+    symlink /storage/sdcard1 /sdcard
+
 on boot
     #port-bridge
     chmod 0660 /dev/smd0
@@ -77,11 +82,11 @@ service qmuxd /system/bin/qmuxd
     user radio
     group radio audio bluetooth gps
 
-service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
     class late_start
     disabled
 
-service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
     disabled
 
