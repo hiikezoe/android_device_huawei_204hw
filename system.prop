@@ -17,7 +17,6 @@ rild.libargs=-d/dev/smd0
 persist.dsds.enabled=false
 persist.radio.force_nw_search=1
 ro.bq.gpu_to_cpu_unsupported=1
-ro.dual.sim.phone=false
 ro.telephony.default_network=2
 ro.telephony.call_ring.delay=3000
 ro.telephony.call_ring.multiple=false
