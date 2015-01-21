@@ -102,6 +102,9 @@ service akm8963 /system/bin/akmd8963
     disabled
     oneshot
 
+service netmgrd /system/bin/netmgrd
+    class main
+
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     class late_start
     user root
