@@ -6,7 +6,9 @@ bin/qmuxd
 bin/rild
 bin/rmt_oeminfo
 bin/rmt_storage
+bin/thermald
 etc/audio_policy.conf
+etc/thermald.conf
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
 lib/egl/eglsubAndroid.so
