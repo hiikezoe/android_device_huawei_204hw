@@ -33,7 +33,7 @@ BOARD_WANTS_EMMC_BOOT := true
 TARGET_KERNEL_CONFIG := hw_msm8x25_defconfig
 TARGET_KERNEL_SOURCE := kernel/huawei/204hw
 
-BOARD_EGL_CFG := device/huawei/204hw/egl.cfg
+BOARD_EGL_CFG := device/huawei/204hw/configs/egl.cfg
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USE_MHEAP_SCREENSHOT := true
 TARGET_QCOM_DISPLAY_VARIANT := legacy
