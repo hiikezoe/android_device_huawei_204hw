@@ -18,6 +18,7 @@ PRODUCT_COPY_FILES += \
   $(LOCAL_PATH)/rootdir/ueventd.huawei.rc:root/ueventd.huawei.rc
 
 PRODUCT_COPY_FILES += \
+  frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf \
   frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
   frameworks/native/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
   frameworks/native/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
@@ -27,6 +28,10 @@ PRODUCT_COPY_FILES += \
   frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
   frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
   frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+
+PRODUCT_COPY_FILES += \
+  $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+  $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 $(call inherit-product, build/target/product/full.mk)
 $(call inherit-product, $(LOCAL_PATH)/idc/idc.mk)
@@ -39,6 +44,18 @@ PRODUCT_PACKAGES += \
   gralloc.msm7x27a \
   hwcomposer.msm7x27a \
   libtilerenderer
+
+PRODUCT_PACKAGES += \
+  libmm-omxcore \
+  libOmxCore \
+  libstagefrighthw
+
+PRODUCT_PACKAGES += \
+  audio.a2dp.default \
+  audio.primary.msm7x27a \
+  audio.usb.default \
+  audio_policy.msm7x27a \
+  libaudioutils
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_204hw

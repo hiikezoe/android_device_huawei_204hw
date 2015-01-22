@@ -2,8 +2,14 @@
 <manifest>
   <project name="Dazzozo/android_hardware_qcom_media-legacy" path="hardware/qcom/media-legacy" remote="github" revision="kitkat"/>
   <project name="Dazzozo/android_hardware_qcom_display-legacy.git" path="hardware/qcom/display-legacy" remote="github" revision="jellybean-mr2"/>
+
   <remove-project name="CyanogenMod/android_frameworks_native"/>
   <project name="Dazzozo/android_frameworks_native.git" path="frameworks/native" remote="github" revision="cm-11.0"/>
+  <remove-project name="CyanogenMod/android_hardware_libhardware"/>
+  <project name="hiikezoe/android_hardware_libhardware.git" path="hardware/libhardware" remote="github" revision="cm-11.0-204hw"/>
+  <remove-project name="CyanogenMod/android_hardware_libhardware_legacy"/>
+  <project name="hiikezoe/android_hardware_libhardware_legacy.git" path="hardware/libhardware_legacy" remote="github" revision="cm-11.0-204hw"/>
+
   <project name="hiikezoe/android_kernel_huawei_204hw.git" path="kernel/huawei/204hw" remote="github" revision="cm-11.0"/>
   <project name="hiikezoe/android_device_huawei_204hw.git" path="device/huawei/204hw" remote="github" revision="cm-11.0"/>
 </manifest>
