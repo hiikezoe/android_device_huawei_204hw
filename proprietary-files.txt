@@ -192,6 +192,7 @@ lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 lib/libril.so
 lib/librpc.so
+lib/libsbmcgm-jni.so
 lib/libsc-a2xx.so
 lib/libuim.so
 lib/libvoem_if.so
